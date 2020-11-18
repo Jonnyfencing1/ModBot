@@ -1,0 +1,31 @@
+{
+  "name": "easybot",
+  "version": "1.0.0",
+  "description": "A simple way to deploy a discord.js bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonnyfencing1/EasyBot.git"
+  },
+  "keywords": [
+    "discord.js",
+    "discord",
+    "bot",
+    "easy",
+    "bot",
+    "easybot",
+    "discordapp"
+  ],
+  "author": "DeSys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonnyfencing1/EasyBot/issues"
+  },
+  "homepage": "https://github.com/Jonnyfencing1/EasyBot#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}
