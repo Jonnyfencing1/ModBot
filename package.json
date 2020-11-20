@@ -1,6 +1,6 @@
 {
-  "name": "easybot",
-  "version": "1.0.0",
+  "name": "modbot",
+  "version": "1.0.3",
   "description": "A simple way to deploy a discord.js bot",
   "main": "index.js",
   "scripts": {

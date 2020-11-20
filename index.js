@@ -1,17 +1,23 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
-const package = require("./package.json");
+const mb = require("./package.json");
 
 function startBot(token, prefix) {
-    bot.on("ready", async => {
-        console.log(`EasyBot has been deployed ${bot.user.username}`);
-        console.log(`Running EasyBot module ${package.version}`);
+    if(token == null) {
+        console.log(`Please provide a token to use ModBot`);
+    }
+    if(prefix == null) {
+        console.log(`Please provide a prefix to use for ModBot`);
+    }
+    bot.on("ready", ready => {
+        console.log(`ModBot has been deployed ${bot.user.username}`);
+        console.log(`Running ModBot module ${mb.version}`);
     })
     bot.on("message", msg => {
         if(msg.channel.type === "dm") return;
-        let messagearray = msg.content.split(" ");
-        let cmd = messagearray[0];
-        let args = messagearray.slice(1);
+        let msgArray = msg.content.split(" ");
+        let cmd = msgArray[0];
+        let args = msgArray.slice(1);
         if(msg.author.bot) return;
 
         if(cmd === `${prefix}ping`) {
@@ -19,7 +25,7 @@ function startBot(token, prefix) {
         }
     })
 
-    bot.login(token);
+    bot.login(`${token}`);
 }
 
 module.exports.startBot = startBot;
